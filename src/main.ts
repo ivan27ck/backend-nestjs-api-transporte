@@ -7,7 +7,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   app.enableCors({
-    origin: 'http://localhost:4200', // Permite solicitudes desde Angular
+    origin: ['http://front-transporte-dashboard.s3-website.us-east-2.amazonaws.com/', 'http//localhost:4200'], // Permite solicitudes desde Angular
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Métodos permitidos
     credentials: true, // Si necesitas enviar cookies o autenticación
   });
